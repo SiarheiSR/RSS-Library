@@ -1,0 +1,23 @@
+:root {
+	--minWidth: 320px;
+	--maxWidth: 1920px;
+	--maxWidthContainer: 1230px;
+	/* --CP1: maxWidthContainer + 20px;
+	--CP2: 991.98px;
+	--CP3: 767.98px;
+	--CP4: 479.98px;
+	--maxWidthBurger: 767px; */
+
+	--fontFamily: "Inter", sans-serif;
+	--fontSize: 2rem;
+	--color-primary: #000;
+
+	--main-bg-color: #ddd;
+
+	--btn-color: #;
+	--btn-color-hover: #;
+	--btn-color-active: #;
+	--btn-bg-color: #;
+	--btn-bg-hover: #;
+	--btn-bg-active: #;
+}

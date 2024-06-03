@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	min-width: 38rem;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	/* background-image: url(../img/UnderConstruction.jpg);
+	background-repeat: no-repeat; */
+	scroll-behavior: smooth;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 1;
+	color: #000;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a,
+a:visited,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/* p + p {
+	margin-top: 1em;
+} */
+
+/* nav,
+footer,
+header,
+aside,
+section {
+	display: block;
+} */
+
+button,
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button,
+input[type="submit"] {
+	display: inline-block;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	button,
+	input,
+	label {
+		cursor: pointer;
+	}
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: block;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+img,
+svg,
+video {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	object-fit: cover;
+}

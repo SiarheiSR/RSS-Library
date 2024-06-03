@@ -1,0 +1,101 @@
+﻿
+	Shell:
+
+	~ - корневая папка пользователя(/c/Users/<UserName>);
+	pwd - print working directory (путь тукущей папки);
+	mkdir <my-project> - создать папку в текущей директории;
+	ls - список файлов в папке;
+	echo "Some Text" > file.txt - создать файл с текстом;
+	cat text.txt - чтение файла;
+	rm text.txt - удалить файл;
+	ipconfig - данные локальной сети;
+
+	ls -la - отображение скрытых файлов(Git Bash, Mac);
+	ls -Force - отображение скрытых файлов(PowerShell);
+
+
+	GIT:
+
+	git --version;
+
+	git config --list(q-exit);
+	git config --global init.defaultBranch <name> - имя ветки по умолчанию при инициализации;
+	git config --global user.name userName;
+	git config --global user.email userEmail;
+
+	git init - создать новый репозиторий;
+	
+	git remote add origin https://github.com/... - подключить удалённый репозиторий под локальным именем origin;
+	git fetch <origin>- закачивает новые объекты из удалённого репозитория, подключённого как <origin>,
+				но не применяет изменения локально;
+	git push [-u origin <main/HEAD>]- загрузить изменения из локальной ветки в удалённую
+						[с созданием связи между ними (один раз)];
+	git pull [origin] <branch name> - закачивает новые объекты из удалённого репозитория, подключённого как <origin>,
+				и применяет изменения локально;
+
+	
+	git remote - проверить к какому удалённому репозиторию подключён локальный;
+	git remote -v - проверить настройку удалённого сервера; ?
+
+	git clone https://github.com/... - клонировать репозиторий;
+	git clone https://github.com/... -b <name> - клонировать отдельную ветку <name>;
+	
+	git status - посмотреть состояние staging area и текущее состояние репозитория;
+	
+	git add [-a]/[.] - добавить файлы в staging area;
+	
+	git rm --cached <file> - remove added file;
+	
+	git commit [-m "text"] - сохранить изменения в local repo;
+	git commit --amend [-m "new message"]/[--no-edit]- lets you modify your last commit /[no edit commit message];
+	
+	git branch -vv - посмотреть как удалённая ветка связана с локальной;
+	git branch - показать локальные ветки;
+	git branch -a - список всех веток (и в удалённом repo);
+	git branch <name> - создать новую ветку;
+	git branch -m <name> - изменить имя текущей ветки на <name>;
+	git branch -d <name> - удалить ветку, если нет неслитых изменений;
+	git branch -D <name> - удалить ветку принудительно, если есть неслитые изменения;
+	текущую ветку удалить нельзя
+	
+
+	git checkout <commit hash> - перейти (переместить метку HEAD) к определённой версии
+					проекта по SHA1 хэшу коммита;
+
+	git checkout [<name>]/[-b <name>] - перейти (к определённой версии проекта по названию ветки)
+						на ветку / создать новую ветку и перейти на неё;
+	
+
+	git merge -m "message" <feature branch name> - слияние другой ветки (feature branch) в текущую ветку;
+	
+	
+	git show <hash>- outputs the changes made by a specific commit;
+
+	git log - просмотр истории коммитов;
+	
+	git log --pretty=format:"%h %ad | %s" --date=short
+
+	git log --pretty=format:"%h %ad | %s %d [%an]" --graph --date=short
+
+	{	--pretty="..." - определяет формат вывода;
+		%h - укороченный хэш коммита;
+		%d - дополнения коммита («головы» веток или теги);
+		%ad - дата коммита;
+		%s - комментарий;
+		%an - имя автора;
+		--graph - отображает дерево коммитов в виде ASCII-графика;
+		--date=short - сохраняет формат даты коротким и симпатичным;
+	}
+	
+	git cat-file -t - прочитать тип объекта git по хэшу(commit, tree, blob);
+	git cat-file -p - прочитать содержимое объекта git по хэшу(commit, tree, blob);
+
+	aliaces:
+	
+		git config --global alias.co checkout
+		git config --global alias.ci commit
+		git config --global alias.st status
+		git config --global alias.br branch
+		git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+		git config --global alias.type 'cat-file -t'
+		git config --global alias.dump 'cat-file -p'

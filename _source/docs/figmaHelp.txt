@@ -1,0 +1,9 @@
+﻿Plugins:
+
+font fascia
+inspect styles
+iconify
+color compass
+color overlay
+
+
