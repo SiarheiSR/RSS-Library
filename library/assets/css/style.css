@@ -8,16 +8,16 @@
 	--color: #000;
 	--color-light: #fff;
 	--color-dark: #0c0c0e;
-	--color-focus: #bb945f;
+	--color-focus: ;
 	--color-hover: #bb945f;
-	--color-active: #b0854b;
+	--color-active:#B0854B;
 	--placeholder-color: #8e8e8e;
 	--bg-color-light: #fff;
 	--bg-color-dark: #0c0c0e;
-	--bg-color-hover: #bb945f;
-	--border-color: #0c0c0e;
-	--border-color-hover: #bb945f;
-	--border-color-active: #b0854b;
+	--bg-color-hover:#bb945f;
+	--border-color:#0c0c0e;
+	--border-color-hover:#bb945f;
+	--border-color-active:#B0854B;
 }
 
 @font-face {
@@ -52,6 +52,7 @@
 	font-weight: 400;
 }
 
+
 body {
 	font-family: var(--font-family);
 	/* background-color: var(--bg-color-primary); */
@@ -77,11 +78,78 @@ body {
 	padding: 0px 20px;
 }
 
+/* 			LOGO			 */
+
+.logo {
+	font-family: var(--second-family);
+	font-size: 3rem;
+	letter-spacing: 0.02em;
+	line-height: 1.66667;
+	color: var(--color-light);
+	transition: color .2s ease;
+}
+.logo:hover{
+	color: var(--color-hover);
+}
+.logo:active{
+	color: var(--color-active);
+}
+
+/* 			BUTTON			 */
+
+.btn{
+	display: inline-block;
+	padding: 9px 26px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: var(--color-dark);
+	border: 1px solid var(--border-color);
+	border-radius: 0.2rem;
+	outline: 1px solid transparent;
+	/* outline-offset: 1px; */
+	transition: background-color .3s, outline-color .3s;
+}
+.btn:focus-visible{
+	outline-color: var(--color);
+}
+.btn:hover{
+	background-color: var(--bg-color-hover);
+	border: 1px solid var(--border-color-hover);
+}
+.btn:active{
+	background-color: var(--color-active);
+	border: 1px solid var(--border-color-active);
+}
+
+/* 			TITLE			 */
+
+.title{
+	position: relative;
+	font-family: var(--second-family);
+	font-size: 4rem;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+	text-align: center;
+	color: var(--color-dark);
+}
+.title::after{
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	width: 4rem;
+	height: 1px;
+	background-color: var(--color-dark);
+}
+
 /* 			HEADER			 */
 
 .header {
 	background: #0c0c0e;
 }
+
 
 .nav {
 	background: #0c0c0e;
@@ -116,7 +184,8 @@ body {
 		scale 0.2s;
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px){
+
 }
 
 .hide {
